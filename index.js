@@ -1,4 +1,4 @@
-function generateRandomNumber= (num) => {
+function generateRandomNumber(num) {
     return Math.floor(Math.random() * num)
 };
 
@@ -22,12 +22,18 @@ for (let prop in collectiveWisdom) {
             personnalWisdom.push(`You are having: ${collectiveWisdom[prop][optionIdx]}.`)
         break
 
-        case 'fortuneOutput':
+        case 'advice':
             personnalWisdom.push(`You should : ${collectiveWisdom[prop][optionIdx]}.`)
+        break 
+
         default:
             personnalWisdom.push('There is not enough info.')
 
     }
 };
 
+        function formatWisdom() {
+            console.log(personnalWisdom.join('\n'))
+        }
 
+formatWisdom()
